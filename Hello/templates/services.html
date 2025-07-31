@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services{% endblock %}
+
+{% block body %}
+
+<style>
+    footer {
+        background-color: #003366;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    footer h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    footer .footer-links {
+        margin: 10px 0 15px;
+    }
+
+    footer .footer-links a {
+        color: #ccc;
+        margin: 0 12px;
+        text-decoration: none;
+        font-size: 0.95em;
+    }
+
+    footer .footer-links a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    footer p {
+        font-size: 0.85em;
+        color: #bbb;
+    }
+</style>
+
+<!-- Hero Banner -->
+<div class="container-fluid bg-dark text-white text-center py-5" style="background: url('{% static 'img/services-banner.jpg' %}') center/cover no-repeat;">
+  <div class="py-5" style="background: rgba(0,0,0,0.6);">
+    <h1 class="display-4 fw-bold">Explore Our Services</h1>
+    <p class="lead">Comfortable rides, professional drivers, and personalized packages.</p>
+  </div>
+</div>
+
+<!-- Why Choose Us -->
+<div class="container text-center my-5">
+  <h2 class="fw-bold">Why Travel with Pandey Tour & Travels?</h2>
+  <div class="row text-muted mt-4">
+    <div class="col-md-3"><i class="bi bi-clock-fill text-primary"></i> 24x7 Availability</div>
+    <div class="col-md-3"><i class="bi bi-shield-check text-success"></i> Safe & Sanitized Cabs</div>
+    <div class="col-md-3"><i class="bi bi-geo-alt-fill text-warning"></i> GPS-Enabled Vehicles</div>
+    <div class="col-md-3"><i class="bi bi-person-check-fill text-info"></i> Trained Drivers</div>
+  </div>
+</div>
+
+<!-- Our Popular Services -->
+<div class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Popular Travel Packages</h2>
+  <div class="row g-4">
+    <!-- Vrindavan - Mathura -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'img/vrindavan.jpg' %}" class="card-img-top" alt="Vrindavan Tour">
+        <div class="card-body">
+          <h5 class="card-title">Vrindavan - Mathura Yatra</h5>
+          <p class="card-text">Visit sacred places around Vrindavan & Mathura with our guided cab tours.</p>
+          <a href="{% url 'contact' %}" class="btn btn-outline-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Ayodhya Tour -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'img/ayodhyaa.jpg' %}" class="card-img-top" alt="Ayodhya Tour">
+        <div class="card-body">
+          <h5 class="card-title">Ayodhya Tour</h5>
+          <p class="card-text">Plan your visit to Shri Ram Janmabhoomi and other holy temples in Ayodhya.</p>
+          <a href="{% url 'contact' %}" class="btn btn-outline-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Wedding Cabs -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'img/wedding1.jpg' %}" class="card-img-top" alt="Wedding Cars">
+        <div class="card-body">
+          <h5 class="card-title">Wedding Cab Services</h5>
+          <p class="card-text">Luxury and decorated vehicles for your special day, intercity or local.</p>
+          <a href="{% url 'contact' %}" class="btn btn-outline-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Kainchi Dham Ashram -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'img/kainchi.jpeg' %}" class="card-img-top" alt="Kainchi Dham">
+        <div class="card-body">
+          <h5 class="card-title">Kainchi Dham Yatra</h5>
+          <p class="card-text">Daily rides to Neem Karoli Baba’s Ashram from all major cities nearby.</p>
+          <a href="{% url 'contact' %}" class="btn btn-outline-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+    <!-- Picnic / Tour Packages -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm">
+        <img src="{% static 'img/picnic.jpg' %}" class="card-img-top" alt="Picnic Tours">
+        <div class="card-body">
+          <h5 class="card-title">Picnic & Tour Packages</h5>
+          <p class="card-text">Perfect for school trips, family getaways & corporate outings.</p>
+          <a href="{% url 'contact' %}" class="btn btn-outline-primary">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Booking Prompt -->
+<div class="container-fluid bg-primary text-white text-center py-5 my-5">
+  <h3 class="mb-3">Planning a trip? We’re here to help!</h3>
+  <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Book on Call</a>
+</div>
+
+<!-- Fleet Section -->
+<div class="container my-5">
+  <h2 class="text-center fw-bold mb-4">Our Fleet</h2>
+  <div class="row text-center text-muted">
+    <div class="col-6 col-md-2">🚗 Sedan</div>
+    <div class="col-6 col-md-2">🚕 Hatchback</div>
+    <div class="col-6 col-md-2">🚙 SUV/MUV</div>
+    <div class="col-6 col-md-2">🚘 Luxury Sedan</div>
+    <div class="col-6 col-md-2">🚐 Tempo Traveller</div>
+    <div class="col-6 col-md-2">🚌 Bus & Mini Coach</div>
+  </div>
+</div>
+
+<footer>
+    <h3>Pandey Tour & Travels</h3>
+    <div class="footer-links">
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'about' %}">About</a> |
+        <a href="{% url 'services' %}">Services</a> |
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+    <p>&copy; 2025 Pandey Tour & Travels | All rights reserved.</p>
+</footer>
+
+{% endblock %}

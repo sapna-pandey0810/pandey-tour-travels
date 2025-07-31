@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services{% endblock %}
+
+{% block body %}
+
+<!-- Hero Banner -->
+<div class="container-fluid text-white text-center py-5"
+     style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('{% static 'img/services-banner.jpg' %}') center/cover no-repeat;">
+
+  <div class="py-4">
+    <h1 class="display-4 fw-bold">Discover Our Tour Packages</h1>
+    <p class="lead mt-3 mb-4">
+      From spiritual yatras to weekend retreats — travel comfortably with trusted drivers, flexible plans, and unbeatable experiences.
+    </p>
+    <a href="#package-list" class="btn btn-warning px-4 py-2 fw-semibold shadow">View Packages</a>
+  </div>
+
+</div>
+
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f6f6f6;
+    }
+
+    .heading {
+        text-align: center;
+        margin: 40px 0 30px;
+        color: #003366;
+        font-size: 2.2em;
+        font-weight: bold;
+    }
+
+    .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .package-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        padding: 25px 20px;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .package-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .package-card h3 {
+        color: #003366;
+        font-size: 1.4em;
+        margin-bottom: 12px;
+    }
+
+    .package-card p {
+        color: #555;
+        font-size: 0.95em;
+        line-height: 1.6;
+    }
+
+    .btn-book {
+        display: inline-block;
+        margin-top: 18px;
+        padding: 10px 25px;
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        font-size: 0.95em;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-book:hover {
+        background-color: #e65c00;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #003366;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    footer h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    footer .footer-links {
+        margin: 10px 0 15px;
+    }
+
+    footer .footer-links a {
+        color: #ccc;
+        margin: 0 12px;
+        text-decoration: none;
+        font-size: 0.95em;
+    }
+
+    footer .footer-links a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    footer p {
+        font-size: 0.85em;
+        color: #bbb;
+    }
+</style>
+
+<!-- Updated Section with ID -->
+<div class="container" id="package-list">
+    <h1 class="heading">Our Popular Packages</h1>
+    <div class="packages-grid">
+        <div class="package-card">
+            <h3>Vrindavan – Mathura Yatra</h3>
+            <p>Includes Govardhan, Barsana, Gokul, Nandgaon and more. Sacred travel experience with expert drivers.</p>
+            <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+        </div>
+
+        <div class="package-card">
+            <h3>Ayodhya Tours</h3>
+            <p>Comfortable cabs from Haldwani to Ayodhya. Perfect for spiritual family journeys.</p>
+            <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+        </div>
+
+        <div class="package-card">
+            <h3>Wedding Cab Services</h3>
+            <p>Decorated cars and luxury vehicles available for weddings and family events.</p>
+            <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+        </div>
+
+        <div class="package-card">
+            <h3>Kainchi Dham Ashram</h3>
+            <p>Daily trips to Neem Karoli Baba’s ashram. Clean and safe rides from your doorstep.</p>
+            <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+        </div>
+
+        <div class="package-card">
+            <h3>Picnic & Tour Packages</h3>
+            <p>Weekend getaways to Naukuchiatal, Bhimtal, Jim Corbett, Ranikhet, and more.</p>
+            <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+        </div>
+
+        <div class="package-card">
+            <h3>Kedarnath Tour Package</h3>
+            <p>Plan your spiritual journey to Kedarnath with comfortable transport, stay, and guided darshan services.</p>
+            <a href="{% url 'contact' %}" class="btn-book">Book Now</a>
+        </div>
+    </div>
+</div>
+
+<!-- Why Choose Us -->
+<div class="container text-center my-5">
+  <h2 class="fw-bold">Why Travel with Pandey Tour & Travels?</h2>
+  <div class="row text-muted mt-4">
+    <div class="col-md-3"><i class="bi bi-clock-fill text-primary"></i> 24x7 Availability</div>
+    <div class="col-md-3"><i class="bi bi-shield-check text-success"></i> Safe & Sanitized Cabs</div>
+    <div class="col-md-3"><i class="bi bi-geo-alt-fill text-warning"></i> GPS-Enabled Vehicles</div>
+    <div class="col-md-3"><i class="bi bi-person-check-fill text-info"></i> Trained Drivers</div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <h3>Pandey Tour & Travels</h3>
+    <div class="footer-links">
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'about' %}">About</a> |
+        <a href="{% url 'services' %}">Services</a> |
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+    <p>&copy; 2025 Pandey Tour & Travels | All rights reserved.</p>
+</footer>
+
+{% endblock %}

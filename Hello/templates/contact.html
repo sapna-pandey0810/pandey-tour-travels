@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services{% endblock %}
+
+{% block body %}
+<style>
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background-color: #f6f6f6;
+    }
+    footer {
+        background-color: #003366;
+        color: #fff;
+        padding: 40px 20px;
+        text-align: center;
+        margin-top: 60px;
+    }
+
+    footer h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    footer .footer-links {
+        margin: 10px 0 15px;
+    }
+
+    footer .footer-links a {
+        color: #ccc;
+        margin: 0 12px;
+        text-decoration: none;
+        font-size: 0.95em;
+    }
+
+    footer .footer-links a:hover {
+        color: #fff;
+        text-decoration: underline;
+    }
+
+    footer p {
+        font-size: 0.85em;
+        color: #bbb;
+    }
+</style>
+
+<!-- Hero Image Section (Just the image) -->
+<section class="contact-hero" style="background: url('/static/img/pandey_travels.png') center/cover no-repeat; height: 400px; width: 100%;">
+</section>
+
+<!-- Text Section Below the Image -->
+<section style="text-align: center; padding: 40px 20px;">
+  <h1 style="font-size: 3rem; margin-bottom: 10px;">Contact Us</h1>
+  <p style="font-size: 1.2rem;">We are always here to assist you with your travel needs!</p>
+</section>
+
+
+<section style="padding: 50px 20px; max-width: 1200px; margin: auto;">
+  <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center;">
+
+    <!-- Contact Form -->
+    <div style="flex: 1 1 400px;">
+      <h2 style="margin-bottom: 20px;">Send us a message</h2>
+      <form method="POST" action="{% url 'contact' %}" style="display: flex; flex-direction: column; gap: 15px;">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc;">
+        <input type="email" name="email" placeholder="Your Email" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc;">
+        <input type="tel" name="phone" placeholder="Phone Number" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc;">
+        <textarea name="message" placeholder="Your Message" rows="5" required style="padding: 12px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+        <button type="submit" style="padding: 12px; background-color: #ff6f00; color: white; border: none; border-radius: 6px; cursor: pointer;">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Contact Details -->
+    <div style="flex: 1 1 300px;">
+      <h2 style="margin-bottom: 20px;">Get in touch</h2>
+      <p><strong>📍 Address:</strong> Pandey Tour & Travels, Nainital , Uttrakhand </p>
+      <p><strong>📞 Phone:</strong> <a href="tel:+917467803466" style="color: #333;">+91 8057047563</a></p>
+      <p><strong>✉️ Email:</strong> <a href="mailto:sapnapandey1021@gmail.com" style="color: #333;">sapnapandey1021@gmail.com</a></p>
+      <p><strong>🕒 Working Hours:</strong> 6:00 AM – 10:00 PM (All Days)</p>
+
+      <h3 style="margin-top: 30px;">Follow Us</h3>
+      <div style="display: flex; gap: 15px; margin-top: 10px;">
+        <a href="#" target="_blank"><img src="/static/img/facebook.png" alt="Facebook" style="width: 80px; height: 80px"></a>
+        <a href="#" target="_blank"><img src="/static/img/instagram.jpg" alt="Instagram" style="width: 80px;height: 80px"></a>
+        <a href="#" target="_blank"><img src="/static/img/whatsapp.png" alt="WhatsApp" style="width: 80px;height: 80px"></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Google Map Embed -->
+<section style="margin: 50px 0;">
+  <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</section>
+
+<!-- Booking Prompt -->
+<div class="container-fluid bg-primary text-white text-center py-5 my-5">
+  <h3 class="mb-3">Planning a trip? We’re here to help!</h3>
+  <a href="{% url 'contact' %}" class="btn btn-light btn-lg">Book on Call</a>
+</div>
+
+<!-- Why Choose Us -->
+<div class="container text-center my-5">
+  <h2 class="fw-bold">Why Travel with Pandey Tour & Travels?</h2>
+  <div class="row text-muted mt-4">
+    <div class="col-md-3"><i class="bi bi-clock-fill text-primary"></i> 24x7 Availability</div>
+    <div class="col-md-3"><i class="bi bi-shield-check text-success"></i> Safe & Sanitized Cabs</div>
+    <div class="col-md-3"><i class="bi bi-geo-alt-fill text-warning"></i> GPS-Enabled Vehicles</div>
+    <div class="col-md-3"><i class="bi bi-person-check-fill text-info"></i> Trained Drivers</div>
+  </div>
+</div>
+
+<footer>
+    <h3>Pandey Tour & Travels</h3>
+    <div class="footer-links">
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'about' %}">About</a> |
+        <a href="{% url 'services' %}">Services</a> |
+        <a href="{% url 'contact' %}">Contact</a>
+    </div>
+    <p>&copy; 2025 Pandey Tour & Travels | All rights reserved.</p>
+</footer>
+
+{% endblock %}
