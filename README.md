@@ -11,14 +11,29 @@ A full-stack Django-based travel and tourism website that allows users to explor
 - 📊 Admin dashboard to view all bookings and messages
 - 📱 Fully responsive design for mobile users
 - 🔐 Secure form submission with CSRF protection
+- ⚙️ **RESTful APIs** created using Django REST Framework (tested via Postman)
 
 ## 🔧 Tech Stack
 
 - **Frontend:** HTML5, CSS3, Bootstrap 5
 - **Backend:** Python, Django
+- **API:** Django REST Framework, Postman
 - **Database:** SQLite (can be switched to PostgreSQL/MySQL)
 - **Email Support:** SMTP (Gmail, customizable)
 - **Deployment Ready:** Fully functional local Django server
+
+## 🔌 REST API Endpoints
+
+Implemented APIs using Django REST Framework:
+
+- `GET /api/contacts/` → View all contact submissions
+- `POST /api/contacts/` → Add a new contact message
+- `GET /api/bookings/` → View all bookings
+- `POST /api/bookings/` → Create a new booking
+- `GET /api/packages/` → View available packages
+- `GET /api/services/` → View service list
+
+Tested using **Postman** with full CRUD support.
 
 ## 📬 Contact Form + Email
 
@@ -29,6 +44,7 @@ A full-stack Django-based travel and tourism website that allows users to explor
 ## 🧠 What I Learned
 
 - Building dynamic pages using Django templates and views
+- Creating and testing REST APIs using Django REST Framework
 - Handling form submissions securely with CSRF protection
 - Configuring email backend to send real-time messages
 - Creating responsive UI using Bootstrap and custom CSS
@@ -38,26 +54,17 @@ A full-stack Django-based travel and tourism website that allows users to explor
 
 Here are some screenshots from the **Pandey Tour & Travels** Django website:
 
-### 🏠Home Page
+### 🏠 Home Page
 ![Home](screenshots/home.png)
 
-### 📦Services Page
+### 📦 Services Page
 ![Services](screenshots/services.png)
 
-### 📁Packages Page
+### 📁 Packages Page
 ![Packages](screenshots/packages.png)
 
-### 📬Contact Page
+### 📬 Contact Page
 ![Contact](screenshots/contact.png)
 
-### 📃About Us Page
+### 📃 About Us Page
 ![About Us](screenshots/aboutus.png)
-
-## 📌 Setup Instructions
-
-```bash
-git clone https://github.com/yourusername/pandey-tour-travels.git
-cd pandey-tour-travels
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
